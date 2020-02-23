@@ -60,9 +60,9 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
                 stackCopy = copy.deepcopy(edit)
                 stackCopy.append(x)
                 if x == end_word:
-                    lengthOfStackCopy = len(stackCopy)
-                    for y in range(1,lengthOfStackCopy-2):
-                        if -adjacent(edit[y - 1],edit[ y + 1]):
+                    #lengthOfStackCopy = len(stackCopy)
+                    for y in range(1,len(stackCopy) - 2):
+                        if _adjacent(edit[y - 1],edit[ y + 1]):
                             stackCopy.pop(y)
                     return (stackCopy)
                 myQue.appendleft(stackCopy)
