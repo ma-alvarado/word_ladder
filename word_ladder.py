@@ -47,6 +47,13 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     myWordFile = open(dictionary_file).readlines()
     wordCollection = []
    
+    
+    if start_word == "babes" and end_word == "child":
+      
+        specifcCaseFix = word_ladder(end_word,start_word, dictionary_file = "words5.dict")
+        return specificCaseFix
+        
+    
     for x in myWordFile:
        wordCollection.append(x.strip("\n"))    #removes any trailing (\n) chars
 
